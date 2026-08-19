@@ -73,7 +73,7 @@ for tag in [1, 2, 3]:
     f = ops.eleForce(tag)
     f_elem[tag] = {
         'Fx_I': f[0], 'Fy_I': f[1], 'Mz_I': -f[2],
-        'Fx_J': f[3], 'Fy_J': f[4], 'Mz_J': -f[5],
+        'Fx_J': f[3], 'Fy_J': f[4], 'Mz_J': f[5],
     }
 
 col_AB = {

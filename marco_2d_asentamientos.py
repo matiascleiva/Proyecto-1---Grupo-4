@@ -113,7 +113,7 @@ print(f"  Sum Fy = {node1_ry + node4_ry:12.6f} tonf (debe ser 0)")
 print("\n--- MOMENTOS FLECTORES ---")
 for ele_tag in range(1, 4):
     forces = ops.eleForce(ele_tag)
-    print(f"Elemento {ele_tag}: M_I = {-forces[2]:12.6f} tonf*m | M_J = {-forces[5]:12.6f} tonf*m")
+    print(f"Elemento {ele_tag}: M_I = {-forces[2]:12.6f} tonf*m | M_J = {forces[5]:12.6f} tonf*m")
 
 # --- 9.3 Desplazamientos ---
 print("\n--- DESPLAZAMIENTOS ---")
