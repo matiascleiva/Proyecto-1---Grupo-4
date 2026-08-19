@@ -82,8 +82,8 @@ fuerzas = {}
 for tag, info in elementos.items():
     f = ops.eleForce(tag)
     fuerzas[tag] = {
-        'Fx_I': f[0], 'Fy_I': f[1], 'Mz_I': f[2],
-        'Fx_J': f[3], 'Fy_J': f[4], 'Mz_J': f[5],
+        'Fx_I': f[0], 'Fy_I': f[1], 'Mz_I': -f[2],
+        'Fx_J': f[3], 'Fy_J': f[4], 'Mz_J': -f[5],
     }
 
 print("Fuerzas internas extraidas:")

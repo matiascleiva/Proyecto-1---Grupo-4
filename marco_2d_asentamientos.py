@@ -89,11 +89,11 @@ ops.reactions()
 
 node1_rx = ops.nodeReaction(1, 1)
 node1_ry = ops.nodeReaction(1, 2)
-node1_mz = ops.nodeReaction(1, 3)
+node1_mz = -ops.nodeReaction(1, 3)
 
 node4_rx = ops.nodeReaction(4, 1)
 node4_ry = ops.nodeReaction(4, 2)
-node4_mz = ops.nodeReaction(4, 3)
+node4_mz = -ops.nodeReaction(4, 3)
 
 print(f"\nNodo 1 (Apoyo A - Empotrado):")
 print(f"  Fx = {node1_rx:12.6f} tonf")
@@ -113,7 +113,7 @@ print(f"  Sum Fy = {node1_ry + node4_ry:12.6f} tonf (debe ser 0)")
 print("\n--- MOMENTOS FLECTORES ---")
 for ele_tag in range(1, 4):
     forces = ops.eleForce(ele_tag)
-    print(f"Elemento {ele_tag}: M_I = {forces[2]:12.6f} tonf*m | M_J = {forces[5]:12.6f} tonf*m")
+    print(f"Elemento {ele_tag}: M_I = {-forces[2]:12.6f} tonf*m | M_J = {-forces[5]:12.6f} tonf*m")
 
 # --- 9.3 Desplazamientos ---
 print("\n--- DESPLAZAMIENTOS ---")
